@@ -46,6 +46,12 @@ public class Graph<T> {
                 + " edges.");
     }
 
+    public List<T> getAdjacentVertices(T vertex){
+        if(!map.containsKey(vertex))
+            return null;
+        return map.get(vertex);
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
